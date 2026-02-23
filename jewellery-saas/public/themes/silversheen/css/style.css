@@ -34,6 +34,47 @@
   --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* ====== Authentication page styles ====== */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-cream);
+  padding: 2rem 0;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  background: var(--brand-white);
+}
+
+.auth-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--brand-dark);
+}
+
+.auth-card label {
+  font-weight: 500;
+  color: var(--brand-mid);
+}
+
+.auth-card .btn-primary {
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+
+.auth-card .btn-primary:hover {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
+}
 /* === RESET & BASE === */
 *,
 *::before,
@@ -168,6 +209,29 @@ img {
 
 .btn-icon:hover {
   opacity: 0.6;
+}
+
+.profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--brand-dark);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 7px 4px 7px 2px;
+  cursor: pointer;
+}
+
+.profile-btn i {
+  font-size: 1.15rem;
+}
+
+.profile-name {
+  letter-spacing: 0.01em;
 }
 
 .logo-text {
@@ -350,7 +414,9 @@ img {
 }
 
 .hero-slide {
-  height: 78vw;
+  /* enforce 3:4 width:height ratio, responsive */
+  width: 100%;
+  aspect-ratio: 3 / 4;
   max-height: 440px;
   min-height: 300px;
   background-size: cover;

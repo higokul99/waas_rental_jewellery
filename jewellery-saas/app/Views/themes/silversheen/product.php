@@ -43,36 +43,7 @@
     <!-- ========================
        HEADER / NAVBAR
   ========================= -->
-    <header class="site-header sticky-top">
-        <nav class="navbar navbar-light px-3 py-2">
-            <!-- Hamburger -->
-            <button class="btn btn-icon hamburger-btn" id="menuToggle" aria-label="Open menu">
-                <i class="bi bi-list"></i>
-            </button>
-
-            <!-- Logo -->
-            <a class="navbar-brand mx-auto" href="<?= base_url('preview/silversheen') ?>">
-                <div class="logo-text">
-                    <span class="logo-main">SILVERSHEEN</span>
-                    <span class="logo-sub">925 Sterling Silver</span>
-                </div>
-            </a>
-
-            <!-- Right Icons -->
-            <div class="header-icons d-flex align-items-center gap-2">
-                <button class="btn btn-icon" id="searchToggle" aria-label="Search">
-                    <i class="bi bi-search"></i>
-                </button>
-                <button class="btn btn-icon" aria-label="Wishlist">
-                    <i class="bi bi-heart"></i>
-                </button>
-                <button class="btn btn-icon cart-btn" id="cartToggle" aria-label="Cart">
-                    <i class="bi bi-bag"></i>
-                    <span class="cart-badge">2</span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <?= $this->include('themes/silversheen/partials/header') ?>
 
     <!-- ========================
        DRAWER MENU (OFF-CANVAS)
@@ -278,13 +249,7 @@
     <!-- ========================
        BOTTOM MOBILE NAV
   ========================= -->
-    <nav class="bottom-nav" id="bottomNav">
-        <a href="<?= base_url('preview/silversheen') ?>" class="bottom-nav-item" id="navHome"><i class="bi bi-house"></i><span>Home</span></a>
-        <a href="#" class="bottom-nav-item active" id="navShop"><i class="bi bi-grid"></i><span>Shop</span></a>
-        <a href="#" class="bottom-nav-item" id="navSearch"><i class="bi bi-search"></i><span>Search</span></a>
-        <a href="#" class="bottom-nav-item" id="navWishlist"><i class="bi bi-heart"></i><span>Wishlist</span></a>
-        <a href="#" class="bottom-nav-item" id="navCart"><i class="bi bi-bag"></i><span>Cart</span></a>
-    </nav>
+    <?= view('themes/silversheen/partials/bottom_nav', ['active_nav' => 'products']) ?>
 
     <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -18,4 +18,9 @@ class ThemePreview extends BaseController
     {
         return view('themes/silversheen/product');
     }
+
+    public function products(): string
+    {
+        return view('themes/silversheen/products');
+    }
 }

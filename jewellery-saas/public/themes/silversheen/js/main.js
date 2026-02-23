@@ -157,6 +157,8 @@
     item.addEventListener('click', function (e) {
       // Skip the cart link — handled separately
       if (this.id === 'navCart') return;
+      // allow profile and shop links to use their hrefs
+      if (this.id === 'navProfile' || this.id === 'navShop') return;
 
       e.preventDefault();
       qsa('.bottom-nav-item').forEach(function (i) {
@@ -171,11 +173,6 @@
           var inp = searchBar.querySelector('input');
           if (inp) inp.focus();
         }
-      }
-
-      // Shop click opens drawer
-      if (this.id === 'navShop') {
-        openDrawer();
       }
     });
   });

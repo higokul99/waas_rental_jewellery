@@ -43,47 +43,7 @@
   <!-- ========================
        HEADER / NAVBAR
   ========================= -->
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-light px-3 py-2">
-      <!-- Hamburger -->
-      <button class="btn btn-icon hamburger-btn" id="menuToggle" aria-label="Open menu">
-        <i class="bi bi-list"></i>
-      </button>
-
-      <!-- Logo -->
-      <a class="navbar-brand mx-auto" href="#">
-        <div class="logo-text">
-          <span class="logo-main">SILVERSHEEN</span>
-          <span class="logo-sub">925 Sterling Silver</span>
-        </div>
-      </a>
-
-      <!-- Right Icons -->
-      <div class="header-icons d-flex align-items-center gap-2">
-        <button class="btn btn-icon" id="searchToggle" aria-label="Search">
-          <i class="bi bi-search"></i>
-        </button>
-        <button class="btn btn-icon" aria-label="Wishlist">
-          <i class="bi bi-heart"></i>
-        </button>
-        <button class="btn btn-icon cart-btn" id="cartToggle" aria-label="Cart">
-          <i class="bi bi-bag"></i>
-          <span class="cart-badge">2</span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Search Bar (hidden by default) -->
-    <div class="search-bar-wrap" id="searchBar">
-      <div class="search-inner px-3 pb-2">
-        <div class="input-group">
-          <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
-          <input type="search" class="form-control border-start-0" placeholder="Search for anklets, earrings..." />
-          <button class="btn btn-outline-secondary" id="closeSearch"><i class="bi bi-x"></i></button>
-        </div>
-      </div>
-    </div>
-  </header>
+  <?= $this->include('themes/silversheen/partials/header') ?>
 
   <!-- ========================
        DRAWER MENU (OFF-CANVAS)
@@ -183,34 +143,16 @@
           <div class="carousel-item active">
             <div class="hero-slide"
               style="background-image: url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80');">
-              <div class="hero-content">
-                <p class="hero-eyebrow">New Arrivals</p>
-                <h1 class="hero-title">Timeless Silver<br>Jewellery</h1>
-                <p class="hero-sub">925 Sterling Silver • BIS Hallmarked</p>
-                <a href="#" class="btn hero-btn">Shop Now</a>
-              </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="hero-slide"
               style="background-image: url('https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80');">
-              <div class="hero-content">
-                <p class="hero-eyebrow">Trending</p>
-                <h1 class="hero-title">Rose Gold<br>Collection</h1>
-                <p class="hero-sub">Elegant • Minimal • Affordable</p>
-                <a href="#" class="btn hero-btn">Explore</a>
-              </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="hero-slide"
               style="background-image: url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&q=80');">
-              <div class="hero-content">
-                <p class="hero-eyebrow">Best Sellers</p>
-                <h1 class="hero-title">Anklets &<br>Bracelets</h1>
-                <p class="hero-sub">Starting from ₹799 onwards</p>
-                <a href="#" class="btn hero-btn">Shop Now</a>
-              </div>
             </div>
           </div>
         </div>
@@ -796,33 +738,6 @@
       </div>
     </section>
 
-    <!-- INSTAGRAM STRIP -->
-    <section class="insta-section py-3">
-      <div class="text-center px-3 pb-2">
-        <p class="section-eyebrow mb-0">Follow Us</p>
-        <a href="#" class="insta-handle">@silversheenindia</a>
-      </div>
-      <div class="insta-scroll">
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1573408301185-9519f94815f5?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 1" loading="lazy" /></a>
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 2" loading="lazy" /></a>
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 3" loading="lazy" /></a>
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 4" loading="lazy" /></a>
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 5" loading="lazy" /></a>
-        <a href="#" class="insta-thumb"><img
-            src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?w=200&h=200&fit=crop&q=80"
-            alt="Instagram 6" loading="lazy" /></a>
-      </div>
-    </section>
 
   </main>
 
@@ -861,47 +776,20 @@
       </div>
     </div>
 
-    <div class="footer-social text-center mt-4">
-      <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-    </div>
 
     <p class="footer-copy text-center mt-3">© 2024 Silversheen. All rights reserved.</p>
-    <div class="footer-payment text-center mt-2">
+    <!-- <div class="footer-payment text-center mt-2">
       <span class="payment-icon"><i class="bi bi-credit-card"></i> Visa</span>
       <span class="payment-icon">Mastercard</span>
       <span class="payment-icon">UPI</span>
       <span class="payment-icon">COD</span>
-    </div>
+    </div> -->
   </footer>
 
   <!-- ========================
        BOTTOM MOBILE NAV
   ========================= -->
-  <nav class="bottom-nav" id="bottomNav">
-    <a href="#" class="bottom-nav-item active" id="navHome">
-      <i class="bi bi-house"></i>
-      <span>Home</span>
-    </a>
-    <a href="#" class="bottom-nav-item" id="navShop">
-      <i class="bi bi-grid"></i>
-      <span>Shop</span>
-    </a>
-    <a href="#" class="bottom-nav-item" id="navSearch">
-      <i class="bi bi-search"></i>
-      <span>Search</span>
-    </a>
-    <a href="#" class="bottom-nav-item" id="navWishlist">
-      <i class="bi bi-heart"></i>
-      <span>Wishlist</span>
-    </a>
-    <a href="#" class="bottom-nav-item" id="navCart">
-      <i class="bi bi-bag"></i>
-      <span>Cart</span>
-    </a>
-  </nav>
+  <?= view('themes/silversheen/partials/bottom_nav', ['active_nav' => 'home']) ?>
 
   <!-- CART DRAWER -->
   <div class="cart-drawer-overlay" id="cartOverlay"></div>
@@ -1038,7 +926,7 @@
   <!-- Bootstrap 5.3 JS Bundle (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="<?= base_url('themes/silversheen/js/main.js?v=1.1') ?>"></script>
+  <script src="<?= base_url('themes/silversheen/js/main.js?v=1.2') ?>"></script>
 </body>
 
 </html>
