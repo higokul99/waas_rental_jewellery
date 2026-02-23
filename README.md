@@ -1,0 +1,2 @@
+# waas_rental_jewellery
+rental_jewellery
